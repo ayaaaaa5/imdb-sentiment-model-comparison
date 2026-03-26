@@ -1,7 +1,7 @@
-# 📊 IMDB Sentiment Analysis — Deep Learning Models Comparison
+# IMDB Sentiment Analysis — DL Models Comparison
 
 ## Overview
-This project focuses is an enhancement of the previous assignment by using three deep learning architectures:
+This project focuses on an enhancement of the previous assignment by using three deep learning architectures:
 
 - **1D Convolutional Neural Network (1D-CNN)**
 - **Long Short-Term Memory (LSTM)**
@@ -11,13 +11,13 @@ The objective is to compare performance, efficiency, and generalization across t
 
 ---
 
-## Data Preprocessing
+## Data Preprocessing:
 All models use the same preprocessing pipeline:
 
 - Text cleaning (lowercasing, removing HTML tags & special characters)
 - Tokenization with **OOV handling**
 - Sequence padding (max length: **300**)
-- **train / validation / test split**
+- **train/validation/test split**
 
 ---
 
@@ -39,7 +39,7 @@ All models use the same preprocessing pipeline:
 
 ---
 
-### LSTM Model
+### LSTM Model:
 **Architecture**
 - Embedding (128-dim)
 - LSTM (64 units, dropout = 0.3, recurrent dropout = 0.3)
@@ -56,7 +56,7 @@ All models use the same preprocessing pipeline:
 
 ---
 
-### GRU Model
+### GRU Model:
 **Architecture**
 - Embedding (128-dim)
 - GRU (64 units, dropout = 0.3, recurrent dropout = 0.3)
@@ -81,7 +81,7 @@ All models use the same preprocessing pipeline:
 | Epochs          | 5–10 (EarlyStopping)  |
 ---
 
-## Performance Comparison
+## Performance Comparison:
 
 | Model | Train Accuracy | Validation Accuracy | Test Accuracy | Notes |
 |------|---------------|--------------------|--------------|------|
@@ -93,11 +93,11 @@ All models use the same preprocessing pipeline:
 
 ## Comments:
 
-I noticed that all your models started to overfit relatively early in the training process, although the exact timing varied between models. This consistent pattern of early overfitting was the primary justification for employing early stopping.
+I noticed that all your models began to overfit relatively early in the training process, though the exact timing varied across models. This consistent pattern of early overfitting was the primary justification for employing early stopping.
 
 ---
 
-## 🧾 Conclusion
+## Conclusion:
 
 - **CNN is the best-performing model** for this task.
 - **LSTM and GRU are useful for sequence modeling** but do not outperform CNN here.
